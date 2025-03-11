@@ -1,0 +1,72 @@
+html{
+    width: 100%;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-column-gap: 4em;
+    grid-row-gap: 4em;
+    background-color: black;
+}
+/*note to remember the grid-area is to locate 
+the div or element position in grid:
+ row start, column start, row end, column end*/
+.navbar{
+    display: grid;
+    grid-area: 1/1/2/span 3;
+    border-style: solid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    
+
+}
+.navbar>img{
+    background-color: aliceblue;
+    margin: 5px;
+    border-radius: 8px;
+}
+.searchbar{
+    grid-row: 2/2/3/span 3;
+    height: 30px;
+    
+}
+
+.sideNavbar{
+    grid-area: 2/1/span 5/2;
+   
+    
+}
+
+.mainForcast{
+    grid-area: 3/2/4/3;
+    
+}
+
+.todayForcast{
+    grid-area: 4/2/5/3;
+    
+
+}
+
+.airCondition{
+    grid-area:5/2/5/3 ;
+    
+}
+
+.Sevendays{
+    grid-area: 2/3/span 5/3;
+    
+}
+
+.airCondition,.mainForcast,.navbar,.searchbar,.Sevendays,.sideNavbar,.todayForcast{
+    border-style: solid;
+    background-color:#1f2a3b ;
+    
+    border-radius: 20px;
+    
+    
+}
+
+
