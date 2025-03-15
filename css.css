@@ -1,221 +1,103 @@
-html {
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-
+* {
+    font-family: Nunito, sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    display: grid;
 
-    grid-template-columns: 8em 1fr 1fr;
-
-    grid-template-rows: 2em 1fr 1fr;
-    font-family: 'Poppins', sans-serif;
-    grid-column-gap: 5em;
-    grid-row-gap: 2em;
-    color: white;
-    background-color: #33405C;
-    font-weight: bolder;
-
-    justify-content: center;
-    justify-items: center;
-
-
-}
-
-/*note to remember the grid-area is to locate 
-the div or element position in grid:
- row start, column start, row end, column end*/
-
-.navbar>img {
-    background-color: aliceblue;
-    margin: 5px;
-    border-radius: 8px;
-}
-
-.searchbar {
+body{
     display: flex;
-    grid-area: 1/2/2/3;
-    height: 50px;
+    flex-direction: column;
     justify-content: center;
-    justify-items: center;
-    width: 1050px;
+    gap: 15px;
+    
 }
 
-.searchbar>input {
-
-    border-color: black;
-    padding: 10px;
-    color: white;
-    width: 1050px;
-    height: 50px;
-    font-size: larger;
-
-}
-
-
-
-.sun {
-    width: 100px;
-    height: 100px;
+.navbar{
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+    border-style: solid;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
 }
 
-.mainForcast {
-    grid-area: 2/2/4/3;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 10px;
-    width: 1000px;
-    height: 300px;
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+}
+
+input{
+    width: 900px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+
+#cityforecast{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-
+    border-style: solid;
 }
-
-#city,
-#degree {
-    font-weight: bolder;
-    color: white;
-    font-size: 60px;
-}
-
-.column1 {
-    grid-area: 1/1/span 2/ 2;
+#text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-
-
-}
-
-.column2 {
-    grid-area: 1/2/span 2/ 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 30px;
 }
 
 
-
-.todayForcast {
-    grid-area: 4/2/5/3;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 2em 1fr;
-    column-gap: 10px;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    padding: 10px;
-    width: 1020px;
-
-
-}
-
-#title {
-    grid-column: 1/span 1;
-    grid-row: 1/1;
-    color: white;
-}
-
-
-.airCondition {
-    grid-area: 5/2/5/3;
-
-
-}
-
-
-
-.airCondition,
-.mainForcast,
-.navbar,
-.searchbar,
-.Sevendays,
-.sideNavbar,
-.todayForcast,
-.searchbar>input {
-
-    background-color: #1f2a3b;
-
-    border-radius: 20px;
-
-
-}
-
-#forcast {
-    color: white;
+#todayforecast{
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
-    align-items: center;
-    grid-row: 2/6;
-}
-
-
-.airCondition {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-rows: 1em 1fr 1fr;
-    padding: 20px;
-    width: 1000px;
-    align-items: center;
-    justify-items: center;
-}
-
-/*row start, column start, row end, column end*/
-#airtitle {
-    grid-area: 1/1/1/1;
-    display: flex;
-    justify-content: end;
-    align-content: end;
-    align-items: end;
-    justify-items: end;
-}
-
-
-
-.Sevendays {
-    grid-area: 2/3/span 5/3;
-    display: grid;
-    grid-template-rows: 2em 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 500px;
+    border-style: solid;
+    gap: 15px;
     padding: 10px;
-
 }
 
-#days {
+#todaycontainer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    border-style: solid;
+    padding: 10px;
+    
 }
 
-.sideNavbar {
-    grid-area: 2/1/span 5/2;
-    width: 100px;
-    display: grid;
-    grid-template-rows: repeat(4, 8em);
-
-    align-items: center;
-    justify-items: center;
-
-}
-
-#navbutton {
+#content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.fa-solid fa-temperature-half {
-    color: white;
-    background-color: white;
+
+#aircondition{
+    
 }
