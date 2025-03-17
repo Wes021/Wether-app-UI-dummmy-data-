@@ -145,3 +145,14 @@ input{
     justify-content: space-between;
     align-items: center;
 }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-self: last baseline;
+    width: 100%;
+    margin-bottom: 5px;
+    border-style: solid;
+    justify-content: space-around;
+    padding: 20px;
+}
